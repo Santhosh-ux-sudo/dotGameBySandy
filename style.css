@@ -72,7 +72,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 h1{
@@ -114,19 +114,29 @@ h1{
     section{
         flex-direction: row;
     }
-       
+        .dot {
+               width: 6px;
+               height: 6px;
+               background-color: black;
+               border-radius: 50%;
+        }
         .h-btn {
-            width: 33px;
+            height: 6px;
+            width: 32px;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
         }
     
         .v-btn {
-            height: 33px;
-         
+            height: 32px;
+            width: 6px;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
         }
     
         .space {
-            height: 33px;
-            width: 33px;
+            height: 32px;
+            width: 32px;
             font-size: 22px;
             
         }
