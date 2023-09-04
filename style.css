@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -114,9 +114,22 @@ h1{
     section{
         flex-direction: row;
     }
-    .game{
-        transform: scale(0.9);
-    }
+       
+        .h-btn {
+            width: 33px;
+        }
+    
+        .v-btn {
+            height: 33px;
+         
+        }
+    
+        .space {
+            height: 33px;
+            width: 33px;
+            font-size: 22px;
+            
+        }
 }
 
 
