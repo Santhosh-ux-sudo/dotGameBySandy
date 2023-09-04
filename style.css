@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +9,11 @@
 body{
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background-color: white;
+    font-family: 'Roboto',sans-serif;
+    
 }
 
 .dot-row,.space-row{
@@ -51,7 +56,6 @@ button{
     width: 35px;
     font-size: 25px;
     font-weight: 900;
-    font-family: cursive;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,5 +68,55 @@ button{
     pointer-events: none;
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+h1{
+    background-color: black;
+    color: yellow;
+    width: 88px;
+    height: 88px;
+    text-align: center;
+    line-height: 88px;
+}
+
+.table{
+    border: 1px solid black;
+    
+}
+.table span{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    
+}
+.table span:nth-child(1),.table span:nth-child(2){
+    padding-bottom: 8px;
+    padding-top: 16px;
+}
+
+.table span:nth-child(3),
+.table span:nth-child(4) {
+    padding-bottom: 16px;
+    padding-top: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+    section{
+        flex-direction: row;
+    }
+    .game{
+        transform: scale(0.9);
+    }
+}
 
 

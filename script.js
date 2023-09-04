@@ -1,6 +1,8 @@
 const SPACE=document.querySelectorAll(".space")
 const BTN=document.querySelectorAll(".button")
 const info=document.querySelector(".info")
+const score1=document.querySelector(".score1")
+const score2=document.querySelector(".score2")
 
 let total_btns=BTN.length
 let lines=[]
@@ -27,6 +29,8 @@ for(let i=0;i<total_btns;i++){
             if(happen==false){
                 change_player()
             }
+            score1.textContent=sandy_score()
+            score2.textContent=esakki_score()
         })
     }
     else if(i>=171 && i<180){
@@ -43,6 +47,8 @@ for(let i=0;i<total_btns;i++){
             if(happen==false){
                 change_player()
             }
+            score1.textContent=sandy_score()
+            score2.textContent=esakki_score()
         })
     }
     else if(i%19==9){
@@ -60,6 +66,8 @@ for(let i=0;i<total_btns;i++){
             if(happen==false){
                 change_player()
             }
+            score1.textContent=sandy_score()
+            score2.textContent=esakki_score()
         })
     }
     else if(i%19==18){
@@ -77,6 +85,8 @@ for(let i=0;i<total_btns;i++){
            if(happen==false){
                 change_player()
             }
+            score1.textContent=sandy_score()
+            score2.textContent=esakki_score()
         })
     }
     else if(i%19<9){
@@ -103,6 +113,8 @@ for(let i=0;i<total_btns;i++){
             if(happen==false && happen2==false){
                 change_player()
             }
+            score1.textContent=sandy_score()
+            score2.textContent=esakki_score()
             
         })
     }
@@ -131,6 +143,8 @@ for(let i=0;i<total_btns;i++){
             if(happen==false && happen2==false){
                 change_player()
             }
+            score1.textContent=sandy_score()
+            score2.textContent=esakki_score()
 
         })
     }
@@ -175,6 +189,29 @@ function change_player(){
     }
     
 }
+
+
+function sandy_score(){
+    let x=0
+    for(let i=0;i<81;i++){
+        if(SPACE[i].textContent=='S'){
+            x++
+        }
+    }
+    return x
+}
+
+function esakki_score(){
+    let x=0
+    for(let i=0;i<81;i++){
+        if(SPACE[i].textContent=='E'){
+            x++
+        }
+    }
+    return x
+}
+
+
 
 
 
